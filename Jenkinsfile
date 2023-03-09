@@ -12,5 +12,10 @@ stages{
       sh 'terraform apply -auto-approve'
     }
   }
-}
-}
+  
+  }
+  }
+  def getTerraformPath(){
+  tfHome = tool name: 'terraform', type: 'terraform'
+  return tfHome
+  }
